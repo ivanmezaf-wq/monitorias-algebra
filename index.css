@@ -460,24 +460,9 @@ ul {
 
 .topics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    max-height: 50vh;
-    overflow-y: auto;
-    padding-right: 1rem;
-}
-
-.topics-grid::-webkit-scrollbar {
-    width: 6px;
-}
-.topics-grid::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.05);
-    border-radius: 3px;
-}
-.topics-grid::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.2);
-    border-radius: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .topic-item {
@@ -504,8 +489,8 @@ ul {
 }
 
 .topic-text h3 {
-    font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 .topic-text p {
@@ -515,93 +500,131 @@ ul {
 
 /* ===== PRICING SPECIFIC ===== */
 .pricing-content {
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
 }
 
-.pricing-table-container {
-    overflow-x: auto;
-    margin: 2rem 0;
-    background: rgba(0,0,0,0.2);
-    border-radius: 1rem;
+.pricing-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    background: rgba(255,255,255,0.03);
     border: 1px solid var(--border-glass);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.vip-card {
+    background: linear-gradient(145deg, rgba(59, 130, 246, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+    transform: scale(1.02);
+}
+
+.vip-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.vip-card h3 {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.price-val {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.vip-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-perks-list {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.pricing-perks-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: auto;
+}
+
+.standard-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
-    text-align: left;
+    margin-bottom: 1rem;
 }
 
-.pricing-table th, 
 .pricing-table td {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--border-glass);
-}
-
-.pricing-table th {
-    background: rgba(255,255,255,0.05);
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem;
 }
 
 .pricing-table tr:last-child td {
     border-bottom: none;
 }
 
-.pricing-table tr:hover td {
-    background: rgba(255,255,255,0.03);
+.price-val-sm {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    text-align: right;
 }
 
 .highlight-row {
     background: rgba(59, 130, 246, 0.1);
-}
-.highlight-row:hover td {
-    background: rgba(59, 130, 246, 0.15) !important;
+    border-radius: 0.5rem;
 }
 
-.price-val {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: white;
-}
-
-.savings {
-    color: #10b981;
-    font-weight: 600;
-}
-
-.pricing-perks {
-    background: rgba(255,255,255,0.03);
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border: 1px solid var(--border-glass);
-}
-
-.pricing-perks h4 {
-    margin-bottom: 1rem;
-    color: #f8fafc;
-}
-
-.pricing-perks ul {
-    margin-bottom: 1rem;
-}
-
-.pricing-perks li {
-    margin-bottom: 0.5rem;
-    color: var(--text-muted);
-    font-size: 0.95rem;
+.highlight-row td {
+    border-bottom: none;
 }
 
 .negotiation-note {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: #94a3b8;
-    border-top: 1px solid var(--border-glass);
+    text-align: center;
+    margin-top: auto;
     padding-top: 1rem;
 }
 
