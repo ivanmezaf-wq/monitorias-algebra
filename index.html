@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitorías de Álgebra Lineal — Ivan Meza</title>
+    <meta name="description" content="Monitorías privadas de Álgebra Lineal con Ivan Meza. 5 semestres de experiencia en la Universidad del Magdalena. Precios especiales para grupos desde $12.000.">
+    <meta name="keywords" content="monitorías, álgebra lineal, universidad del magdalena, tutor, clases privadas, matrices, vectores">
+    <meta property="og:title" content="Monitorías de Álgebra Lineal — Ivan Meza">
+    <meta property="og:description" content="5 semestres de experiencia. Precios desde $12.000 en grupo. ¡Agenda tu monitoría ahora!">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- ===== MATH BACKGROUND DECORATIONS ===== -->
+    <div class="math-bg" aria-hidden="true">
+        <span class="math-item math-matrix" style="top:5%;left:3%">
+            ⎡ 1  3 ⎤<br>⎣ 4  2 ⎦
+        </span>
+        <span class="math-item math-vector" style="top:12%;right:8%">
+            v⃗ = (3, −1, 5)
+        </span>
+        <span class="math-item math-eq" style="top:25%;left:6%">
+            Ax⃗ = λx⃗
+        </span>
+        <span class="math-item math-det" style="top:35%;right:4%">
+            det(A) = ad − bc
+        </span>
+        <span class="math-item math-matrix" style="top:48%;left:2%">
+            ⎡ a₁₁  a₁₂ ⎤<br>⎣ a₂₁  a₂₂ ⎦
+        </span>
+        <span class="math-item math-eq" style="top:55%;right:6%">
+            T: V → W
+        </span>
+        <span class="math-item math-vector" style="top:68%;left:5%">
+            ‖v⃗‖ = √(x² + y²)
+        </span>
+        <span class="math-item math-det" style="top:78%;right:3%">
+            Σ αᵢvᵢ = 0⃗
+        </span>
+        <span class="math-item math-eq" style="top:88%;left:8%">
+            dim(V) = n
+        </span>
+        <span class="math-item math-matrix" style="top:92%;right:10%">
+            A⁻¹A = I
+        </span>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="nav-logo-icon">📐</span>
+                <span class="nav-logo-text">ÁlgebraLineal<span class="accent">.pro</span></span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#tematicas" class="nav-link">Temáticas</a></li>
+                <li><a href="#precios" class="nav-link">Precios</a></li>
+                <li><a href="#contacto" class="nav-link nav-cta">Agenda tu Monitoría</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-pulse"></span>
+                <span>📚 Cupos disponibles — Semestre 2026-II</span>
+            </div>
+            <h1 class="hero-title">
+                Monitorías Privadas de<br>
+                <span class="gradient-text">Álgebra Lineal</span>
+            </h1>
+            <p class="hero-subtitle">
+                5 semestres de experiencia como monitor en la 
+                <strong>Universidad del Magdalena</strong>. Aprende de verdad, 
+                a tu ritmo, con atención personalizada.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Semestres de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="200" data-suffix="+">0</span>
+                    <span class="stat-label">Estudiantes ayudados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Temáticas cubiertas</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20una%20monitoria%20de%20%C3%81lgebra%20Lineal" class="btn btn-primary" id="hero-cta">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.647-.77-6.508-2.222l-.453-.35-3.2 1.073 1.073-3.2-.35-.453A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Agenda tu Monitoría
+                </a>
+                <a href="#precios" class="btn btn-secondary">
+                    Ver Precios
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-img-wrapper">
+                <img src="assets/img/monitoria-tablero.jpg" alt="Ivan Meza explicando matrices en el tablero" class="hero-img" loading="eager">
+                <div class="hero-img-glow"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about" id="sobre-mi">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conóceme</span>
+                <h2 class="section-title">Tu Monitor de <span class="gradient-text">Álgebra Lineal</span></h2>
+                <p class="section-subtitle">No soy un tutor más. Soy alguien que ha vivido las mismas dificultades que tú y las superó.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-photos">
+                    <div class="photo-card photo-main">
+                        <img src="assets/img/monitoria-grupo-2.jpg" alt="Ivan Meza dando monitoría a un grupo de estudiantes" loading="lazy">
+                    </div>
+                    <div class="photo-card photo-secondary">
+                        <img src="assets/img/monitoria-grupo-1.jpg" alt="Sesión de monitoría grupal en aula" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-card glass-card">
+                        <h3>👋 Soy Ivan Meza</h3>
+                        <p>
+                            Estudiante de la <strong>Universidad del Magdalena</strong> con 
+                            <strong>5 semestres de experiencia</strong> como monitor de Álgebra Lineal. 
+                            He ayudado a cientos de estudiantes a entender desde los conceptos más 
+                            básicos hasta los más avanzados de la materia.
+                        </p>
+                        <p>
+                            Sé lo difícil que puede ser esta materia cuando no tienes a alguien que 
+                            te explique bien. Por eso mis monitorías son prácticas, con muchos ejercicios 
+                            y enfocadas en que realmente entiendas, no solo en que pases.
+                        </p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item glass-card">
+                            <span class="feature-icon">🎯</span>
+                            <div>
+                                <strong>Personalizado</strong>
+                                <p>Me adapto a tu nivel y a lo que necesitas reforzar</p>
+                            </div>
+                        </div>
+                        <div class="feature-item glass-card">
+                            <span class="feature-icon">📝</span>
+                            <div>
+                                <strong>Práctico</strong>
+                                <p>Ejercicios tipo examen para que vayas preparado</p>
+                            </div>
+                        </div>
+                        <div class="feature-item glass-card">
+                            <span class="feature-icon">🤝</span>
+                            <div>
+                                <strong>Accesible</strong>
+                                <p>Precios justos y descuentos para grupos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOPICS SECTION ===== -->
+    <section class="section topics" id="tematicas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">¿Qué aprenderás?</span>
+                <h2 class="section-title">Temáticas que <span class="gradient-text">Cubrimos</span></h2>
+                <p class="section-subtitle">Domina cada tema del curso. Desde los fundamentos hasta lo más avanzado.</p>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-card glass-card" data-topic="1">
+                    <div class="topic-number">01</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="10" y1="15" x2="54" y2="15"/>
+                            <line x1="10" y1="32" x2="54" y2="32"/>
+                            <line x1="10" y1="49" x2="54" y2="49"/>
+                            <line x1="20" y1="8" x2="20" y2="56"/>
+                            <line x1="44" y1="8" x2="44" y2="56"/>
+                        </svg>
+                    </div>
+                    <h3>Sistemas de Ecuaciones Lineales</h3>
+                    <p>Métodos de Gauss, Gauss-Jordan, Cramer. Sistemas homogéneos y no homogéneos.</p>
+                    <span class="topic-tag">Fundamental</span>
+                </div>
+                <div class="topic-card glass-card" data-topic="2">
+                    <div class="topic-number">02</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="12" y="12" width="40" height="40" rx="2"/>
+                            <line x1="32" y1="12" x2="32" y2="52"/>
+                            <line x1="12" y1="32" x2="52" y2="32"/>
+                            <text x="20" y="27" font-size="10" fill="currentColor" stroke="none">a</text>
+                            <text x="38" y="27" font-size="10" fill="currentColor" stroke="none">b</text>
+                            <text x="20" y="47" font-size="10" fill="currentColor" stroke="none">c</text>
+                            <text x="38" y="47" font-size="10" fill="currentColor" stroke="none">d</text>
+                        </svg>
+                    </div>
+                    <h3>Matrices</h3>
+                    <p>Operaciones, tipos especiales, inversa, rango, matrices elementales y factorización.</p>
+                    <span class="topic-tag">Esencial</span>
+                </div>
+                <div class="topic-card glass-card" data-topic="3">
+                    <div class="topic-number">03</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="8" x2="8" y2="56"/>
+                            <line x1="56" y1="8" x2="56" y2="56"/>
+                            <line x1="8" y1="8" x2="16" y2="8"/>
+                            <line x1="8" y1="56" x2="16" y2="56"/>
+                            <line x1="48" y1="8" x2="56" y2="8"/>
+                            <line x1="48" y1="56" x2="56" y2="56"/>
+                            <text x="24" y="36" font-size="16" fill="currentColor" stroke="none">det</text>
+                        </svg>
+                    </div>
+                    <h3>Determinantes</h3>
+                    <p>Propiedades, cofactores, adjunta, desarrollo por menores, aplicaciones geométricas.</p>
+                    <span class="topic-tag">Clave</span>
+                </div>
+                <div class="topic-card glass-card" data-topic="4">
+                    <div class="topic-number">04</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="32" cy="32" r="24"/>
+                            <line x1="32" y1="32" x2="50" y2="20" stroke-width="2.5"/>
+                            <line x1="32" y1="32" x2="20" y2="50" stroke-width="2.5"/>
+                            <polygon points="50,20 44,18 46,24" fill="currentColor" stroke="none"/>
+                            <polygon points="20,50 24,44 18,46" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3>Espacios Vectoriales</h3>
+                    <p>Subespacios, base, dimensión, independencia lineal, suma directa, generadores.</p>
+                    <span class="topic-tag">Avanzado</span>
+                </div>
+                <div class="topic-card glass-card" data-topic="5">
+                    <div class="topic-number">05</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8,48 Q32,8 56,48" stroke-width="2"/>
+                            <line x1="20" y1="36" x2="44" y2="36" stroke-dasharray="4"/>
+                            <line x1="32" y1="20" x2="32" y2="50" stroke-dasharray="4"/>
+                            <circle cx="32" cy="36" r="3" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3>Transformaciones Lineales</h3>
+                    <p>Núcleo, imagen, isomorfismos, representación matricial, composición.</p>
+                    <span class="topic-tag">Avanzado</span>
+                </div>
+                <div class="topic-card glass-card" data-topic="6">
+                    <div class="topic-number">06</div>
+                    <div class="topic-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <text x="10" y="28" font-size="16" fill="currentColor" stroke="none">λ</text>
+                            <line x1="28" y1="20" x2="56" y2="20"/>
+                            <line x1="28" y1="44" x2="56" y2="44"/>
+                            <text x="34" y="18" font-size="10" fill="currentColor" stroke="none">v₁</text>
+                            <text x="46" y="18" font-size="10" fill="currentColor" stroke="none">v₂</text>
+                            <text x="34" y="42" font-size="10" fill="currentColor" stroke="none">v₃</text>
+                            <text x="46" y="42" font-size="10" fill="currentColor" stroke="none">v₄</text>
+                            <circle cx="18" cy="44" r="12" stroke-dasharray="4"/>
+                        </svg>
+                    </div>
+                    <h3>Valores y Vectores Propios</h3>
+                    <p>Polinomio característico, diagonalización, multiplicidad algebraica y geométrica.</p>
+                    <span class="topic-tag">Final</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="section pricing" id="precios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Inversión</span>
+                <h2 class="section-title">Precios <span class="gradient-text">Accesibles</span></h2>
+                <p class="section-subtitle">Mientras más amigos traes, menos pagas. Sesiones de <strong>2 horas</strong> cada una.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Individual -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">👤</span>
+                        <h3>Individual</h3>
+                        <p class="pricing-desc">Atención 100% personalizada</p>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="price">30.000</span>
+                        </div>
+                        <span class="pricing-period">por persona / 2 horas</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Sesión personalizada</li>
+                        <li>✓ Ejercicios a tu ritmo</li>
+                        <li>✓ Resolución de dudas ilimitada</li>
+                    </ul>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20una%20monitoria%20individual%20de%20%C3%81lgebra%20Lineal" class="btn btn-outline">Reservar</a>
+                </div>
+
+                <!-- Duo -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">👥</span>
+                        <h3>Dúo</h3>
+                        <p class="pricing-desc">Trae a un compañero</p>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="price">22.000</span>
+                        </div>
+                        <span class="pricing-period">por persona / 2 horas</span>
+                        <span class="pricing-savings">Ahorras $8.000 c/u</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Todo lo individual</li>
+                        <li>✓ Aprendizaje colaborativo</li>
+                        <li>✓ Debates y discusión</li>
+                    </ul>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20queremos%20una%20monitoria%20para%202%20personas%20de%20%C3%81lgebra%20Lineal" class="btn btn-outline">Reservar</a>
+                </div>
+
+                <!-- Grupo 3 — POPULAR -->
+                <div class="pricing-card glass-card pricing-popular">
+                    <div class="popular-badge">🔥 Más Popular</div>
+                    <div class="pricing-header">
+                        <span class="pricing-icon">👥👤</span>
+                        <h3>Trío</h3>
+                        <p class="pricing-desc">El balance perfecto</p>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="price">18.000</span>
+                        </div>
+                        <span class="pricing-period">por persona / 2 horas</span>
+                        <span class="pricing-savings">Ahorras $12.000 c/u</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Todo lo anterior</li>
+                        <li>✓ Grupo pequeño ideal</li>
+                        <li>✓ Mayor interacción</li>
+                    </ul>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20queremos%20una%20monitoria%20para%203%20personas%20de%20%C3%81lgebra%20Lineal" class="btn btn-primary">Reservar</a>
+                </div>
+
+                <!-- Grupo 4 -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">👥👥</span>
+                        <h3>Grupo de 4</h3>
+                        <p class="pricing-desc">Estudien en equipo</p>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="price">15.000</span>
+                        </div>
+                        <span class="pricing-period">por persona / 2 horas</span>
+                        <span class="pricing-savings">Ahorras $15.000 c/u</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Todo lo anterior</li>
+                        <li>✓ Dinámicas grupales</li>
+                        <li>✓ Máximo ahorro por persona</li>
+                    </ul>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20queremos%20una%20monitoria%20para%204%20personas%20de%20%C3%81lgebra%20Lineal" class="btn btn-outline">Reservar</a>
+                </div>
+
+                <!-- Grupo 5+ -->
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">🎓</span>
+                        <h3>Grupo de 5+</h3>
+                        <p class="pricing-desc">El mejor precio</p>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="pricing-amount">
+                            <span class="currency">$</span>
+                            <span class="price">12.000</span>
+                        </div>
+                        <span class="pricing-period">por persona / 2 horas</span>
+                        <span class="pricing-savings">¡Ahorras $18.000 c/u!</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Todo lo anterior</li>
+                        <li>✓ Precio más bajo disponible</li>
+                        <li>✓ Ideal para parciales</li>
+                    </ul>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20queremos%20una%20monitoria%20para%205%2B%20personas%20de%20%C3%81lgebra%20Lineal" class="btn btn-outline">Reservar</a>
+                </div>
+            </div>
+            <p class="pricing-note">💡 <strong>Tip:</strong> Organiza un grupo con tus compañeros y pagan hasta un <strong>60% menos</strong>. ¡Todos ganan!</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact" id="contacto">
+        <div class="container">
+            <div class="contact-card glass-card">
+                <div class="contact-content">
+                    <h2 class="section-title">¿Listo para <span class="gradient-text">aprobar</span>?</h2>
+                    <p>Escríbeme por WhatsApp y cuadramos tu monitoría. Dime qué tema necesitas reforzar y buscamos el mejor horario.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/573003359978">300 335 9978</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span>Universidad del Magdalena, Santa Marta</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <strong>Horario flexible</strong>
+                                <span>Nos adaptamos a tu disponibilidad</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20una%20monitoria%20de%20%C3%81lgebra%20Lineal" class="btn btn-primary btn-large" id="contact-cta">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.647-.77-6.508-2.222l-.453-.35-3.2 1.073 1.073-3.2-.35-.453A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        Escríbeme por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Ivan Meza — Monitorías de Álgebra Lineal</p>
+            <p class="footer-sub">Universidad del Magdalena · Santa Marta, Colombia</p>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20info%20sobre%20las%20monitorias%20de%20%C3%81lgebra%20Lineal" class="whatsapp-fab" id="whatsapp-fab" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.647-.77-6.508-2.222l-.453-.35-3.2 1.073 1.073-3.2-.35-.453A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
