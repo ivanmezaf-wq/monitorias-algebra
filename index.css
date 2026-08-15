@@ -188,15 +188,15 @@ ul {
 
 .slide-bg {
     position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     z-index: 1;
-    /* HEAVY BLUR TO PROTECT FACES */
-    filter: blur(25px);
+    /* NO blur — photo shows clearly */
+    filter: none;
     transition: transform 0.5s ease;
 }
 
@@ -207,24 +207,25 @@ ul {
     width: 100%;
     height: 100%;
     z-index: 2;
-    /* GRADIENT FADE TO CONTENT */
+    /* LEFT-TO-RIGHT gradient: photo visible on left, dark on right for text */
     background: linear-gradient(
-        135deg, 
-        rgba(15, 23, 42, 0.95) 0%, 
-        rgba(15, 23, 42, 0.7) 40%, 
-        rgba(15, 23, 42, 0.4) 100%
+        to right, 
+        rgba(15, 23, 42, 0.15) 0%, 
+        rgba(15, 23, 42, 0.5) 35%, 
+        rgba(15, 23, 42, 0.85) 55%, 
+        rgba(15, 23, 42, 0.97) 75%
     );
 }
 
-/* Add an extra dark layer towards the bottom for text readability */
+/* Subtle bottom fade for smooth section transitions */
 .slide::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60%;
-    background: linear-gradient(to top, rgba(15,23,42,1) 0%, transparent 100%);
+    height: 20%;
+    background: linear-gradient(to top, rgba(15,23,42,0.9) 0%, transparent 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -253,15 +254,17 @@ ul {
 
 /* ===== GLASSMORPHISM CARD ===== */
 .glass-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border-glass);
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1.5rem;
     padding: 3rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
     max-width: 800px;
     animation: fadeInUp 0.8s ease backwards;
+    /* Push content to the right side */
+    margin-left: auto;
 }
 
 @keyframes fadeInUp {
