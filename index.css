@@ -130,6 +130,10 @@ ul {
     padding: 0.75rem 0;
 }
 
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
