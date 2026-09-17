@@ -3,261 +3,847 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitorías de Álgebra Lineal — Ivan Meza</title>
-    <meta name="description" content="Domina el Álgebra Lineal con monitorías privadas y planes semestrales. Aprende a tu ritmo.">
+    <title>Monitorías de Álgebra Lineal — Ivan Meza | Catálogo Oficial</title>
+    <meta name="description" content="Catálogo y reserva de monitorías de Álgebra Lineal con Ivan Meza. Curso vacacional de 70k, planes individuales, grupales y semestrales para estudiantes de la Universidad del Magdalena.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- ===== NAVIGATION ===== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="nav-logo">
-                <span class="nav-logo-icon">📐</span>
-                <span class="nav-logo-text">ÁlgebraLineal<span class="accent">.pro</span></span>
-            </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#tematicas" class="nav-link">Temáticas</a></li>
-                <li><a href="#planes" class="nav-link">Planes</a></li>
-                <li><a href="#contacto" class="nav-link nav-cta">Agendar</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- ===== HERO SECTION ===== -->
-    <header class="hero" id="inicio">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-content glass-card">
-                <div class="hero-badge">
-                    <span class="badge-pulse"></span>
-                    <span>Semestre 2026-II — Universidad del Magdalena</span>
+    <!-- =========================================================
+         1. NAVEGACIÓN SUPERIOR (HEADER QUE SE OCULTA AL BAJAR)
+         ========================================================= -->
+    <header class="site-header" id="site-header">
+        <div class="header-container">
+            <!-- Identidad de Marca (Extremo Izquierdo) -->
+            <a href="#hero" class="brand-logo" aria-label="Ir al inicio">
+                <div class="logo-icon-wrap">
+                    <svg class="logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
-                <h1 class="hero-title">
-                    Domina el <span class="gradient-text">Álgebra Lineal</span> sin estrés
-                </h1>
-                <p class="hero-subtitle">
-                    Monitorías privadas y planes semestrales diseñados para que aprendas de verdad, a tu ritmo, y asegures tus parciales.
-                </p>
-                <div class="hero-actions">
-                    <a href="#planes" class="btn btn-primary">Ver Planes y Precios</a>
-                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20m%C3%A1s%20info%20sobre%20tus%20monitorias" class="btn btn-outline" target="_blank">📲 Escribir por WhatsApp</a>
+                <div class="logo-text-group">
+                    <span class="logo-name">ÁlgebraLineal<span class="logo-accent">.pro</span></span>
+                    <span class="logo-tagline">Ivan Meza • Monitorías</span>
                 </div>
-            </div>
+            </a>
+
+            <!-- Menú Principal (Central con indicadores dropdown) -->
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-links-list">
+                    <li class="nav-item has-dropdown">
+                        <button class="nav-link-btn" aria-expanded="false">
+                            <span>Programas</span>
+                            <svg class="chevron-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="#catalogo" class="dropdown-item" data-filter-cat="vacacional">
+                                <div class="dropdown-icon orange-bg">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Vacacional Intensivo ($70K)</strong>
+                                    <span>Nivelación y preparación intersemestral</span>
+                                </div>
+                            </a>
+                            <a href="#catalogo" class="dropdown-item" data-filter-cat="plan-semestral">
+                                <div class="dropdown-icon teal-bg">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Plan Semestral VIP</strong>
+                                    <span>Acompañamiento completo de 6 sesiones</span>
+                                </div>
+                            </a>
+                            <a href="#catalogo" class="dropdown-item" data-filter-cat="individual">
+                                <div class="dropdown-icon blue-bg">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Monitorías 1 a 1</strong>
+                                    <span>Atención 100% personalizada por hora</span>
+                                </div>
+                            </a>
+                            <a href="#catalogo" class="dropdown-item" data-filter-cat="talleres">
+                                <div class="dropdown-icon orange-bg">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <strong>Talleres Grupales</strong>
+                                    <span>Aprende con tus compañeros de clase</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#catalogo" class="nav-link">Catálogo en Filas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre-ivan" class="nav-link">Sobre el Tutor</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- ===== SOBRE MI ===== -->
-    <section class="section about-section" id="sobre-mi">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image-wrapper">
-                    <div class="about-img-bg"></div>
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">Tu Monitor</span>
-                    <h2 class="section-title">Hola, soy <span class="gradient-text">Ivan Meza</span></h2>
-                    <p class="about-lead">Estudiante de la Universidad del Magdalena con <strong>5 semestres de experiencia</strong> siendo monitor de Álgebra Lineal.</p>
-                    <p class="about-text">
-                        Sé lo frustrante que puede ser la materia cuando te explican todo de forma abstracta. Mi objetivo es traducir la teoría a la práctica, resolver tus dudas con paciencia y prepararte con ejercicios tipo parcial para que apruebes con seguridad.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">🎓</span>
-                            <span class="stat-desc">Acompañamiento Personalizado</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">📈</span>
-                            <span class="stat-desc">Metodología Práctica</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- =========================================================
+         2. SECCIÓN DE IMPACTO (HERO SECTION) — IMAGEN: "portada"
+         ========================================================= -->
+    <section class="hero-impact-section" id="hero">
+        <div class="hero-canvas-bg"></div>
+        <div class="hero-particles"></div>
 
-    <!-- ===== TEMATICAS ===== -->
-    <section class="section topics-section" id="tematicas">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">El Curso</span>
-                <h2 class="section-title">Temáticas que <span class="gradient-text">Dominaremos</span></h2>
-                <p class="section-subtitle">Te ayudo con cualquier tema del semestre, desde lo básico hasta espacios vectoriales complejos.</p>
-            </div>
-            
-            <div class="topics-grid">
-                <div class="topic-card">
-                    <div class="topic-number">01</div>
-                    <h3>Sistemas de Ecuaciones Lineales</h3>
-                    <p>Gauss, Gauss-Jordan, Regla de Cramer y análisis de sistemas homogéneos.</p>
+        <div class="hero-container">
+            <!-- Mensaje Principal (Izquierda) -->
+            <div class="hero-text-col">
+                <div class="hero-badge-pill">
+                    <span class="pulse-indicator"></span>
+                    <span class="badge-text">Semestre 2026-II • Universidad del Magdalena</span>
                 </div>
-                <div class="topic-card">
-                    <div class="topic-number">02</div>
-                    <h3>Matrices</h3>
-                    <p>Operaciones fundamentales, matriz inversa, cálculo de rango y factorización.</p>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-number">03</div>
-                    <h3>Determinantes</h3>
-                    <p>Propiedades clave, cofactores y desarrollo por menores de forma sencilla.</p>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-number">04</div>
-                    <h3>Espacios Vectoriales</h3>
-                    <p>Entendiendo subespacios, base, dimensión e independencia lineal sin confusiones.</p>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-number">05</div>
-                    <h3>Transformaciones Lineales</h3>
-                    <p>Cálculo de núcleo, imagen, isomorfismos y representación matricial.</p>
-                </div>
-                <div class="topic-card">
-                    <div class="topic-number">06</div>
-                    <h3>Valores y Vectores Propios</h3>
-                    <p>Cálculo de polinomio característico y procesos de diagonalización.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== GALERÍA / EXPERIENCIA ===== -->
-    <section class="section gallery-section" id="experiencia">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">En Acción</span>
-                <h2 class="section-title">Aprende en <span class="gradient-text">Equipo</span></h2>
-                <p class="section-subtitle">Las monitorías grupales son la mejor forma de resolver dudas en conjunto y aprender de los demás.</p>
-            </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/img/monitoria-grupo-1.jpg" alt="Monitoría grupal de Álgebra Lineal" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/img/monitoria-grupo-2.jpg" alt="Estudiantes resolviendo ejercicios" class="gallery-img">
-                </div>
-            </div>
-        </div>
-    </section>
+                <h1 class="hero-headline">
+                    Domina el <span class="highlight-amber">Álgebra Lineal</span> con enfoque práctico y sin estrés
+                </h1>
 
-    <!-- ===== PLANES Y PRECIOS ===== -->
-    <section class="section pricing-section" id="planes">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">Inversión</span>
-                <h2 class="section-title">Elige el plan que <span class="gradient-text">mejor se adapte a ti</span></h2>
-            </div>
-            
-            <div class="pricing-layout">
-                
-                <!-- PLAN SEMESTRAL (VIP) -->
-                <div class="pricing-card vip-card">
-                    <div class="vip-badge">💎 RECOMENDADO</div>
-                    <div class="pricing-header">
-                        <h3>Plan Semestral</h3>
-                        <div class="price-val">$80.000</div>
-                        <p class="vip-desc">El paquete definitivo para asegurar la materia.</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>
-                            <span class="icon">✅</span>
-                            <span><strong>6 monitorías</strong> distribuidas en el semestre.</span>
-                        </li>
-                        <li>
-                            <span class="icon">✅</span>
-                            <span><strong>Preparación de Parciales:</strong> 2 monitorías intensivas (4 horas en total) antes de cada parcial.</span>
-                        </li>
-                        <li>
-                            <span class="icon">✅</span>
-                            <span><strong>Material de apoyo exclusivo</strong> y ejercicios resueltos.</span>
-                        </li>
-                        <li>
-                            <span class="icon">✅</span>
-                            <span><strong>Seguimiento personalizado</strong> durante todo el semestre.</span>
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20inscribirme%20en%20el%20Plan%20Semestral%20VIP" class="btn btn-primary btn-full" target="_blank">
-                        🚀 Quiero el Plan Semestral
+                <p class="hero-description">
+                    Aprende con metodología directa, ejercicios tipo parcial y acompañamiento personalizado para asegurar tus notas y aprobar sin frustraciones.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#catalogo" class="hero-btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <span>Explorar Catálogo</span>
+                    </a>
+                    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20consultar%20disponibilidad%20de%20horarios" target="_blank" class="hero-btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        <span>Chat en WhatsApp</span>
                     </a>
                 </div>
 
-                <!-- MONITORÍAS POR HORA -->
-                <div class="pricing-card standard-card">
-                    <div class="pricing-header">
-                        <h3>Monitorías por Sesión</h3>
-                        <div class="price-val-alt">Desde $15K <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ pers.</span></div>
-                        <p class="vip-desc">El precio indicado es <strong>lo que paga cada persona por la sesión completa de 2 horas</strong>. ¡Entre más sean, más económico para cada uno!</p>
+                <!-- Métricas Rápidas -->
+                <div class="hero-stats-row">
+                    <div class="stat-box">
+                        <span class="stat-number">+500</span>
+                        <span class="stat-label">Alumnos asesorados</span>
                     </div>
-                    
-                    <div class="table-responsive">
-                        <table class="pricing-table">
-                            <thead>
-                                <tr>
-                                    <th>Tamaño del Grupo</th>
-                                    <th class="align-right">Pago por persona<br><small>(Sesión de 2h)</small></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>1 persona</strong> (Individual)</td>
-                                    <td class="align-right">$30.000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>2 personas</strong></td>
-                                    <td class="align-right">$25.000</td>
-                                </tr>
-                                <tr class="highlight-row">
-                                    <td><strong>3 personas</strong></td>
-                                    <td class="align-right">$20.000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>4 personas</strong></td>
-                                    <td class="align-right">$18.000</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>5 personas en adelante</strong></td>
-                                    <td class="align-right">$15.000</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <span class="stat-number">5 Semestres</span>
+                        <span class="stat-label">Experiencia como monitor</span>
                     </div>
-                    <div class="standard-perks">
-                        <p class="small-text">Incluye material de apoyo post-sesión y soporte por WhatsApp para resolución de dudas.</p>
-                        <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20una%20monitor%C3%ADa%20por%20sesi%C3%B3n" class="btn btn-outline btn-full" target="_blank">
-                            🗓 Agendar Sesión
-                        </a>
+                </div>
+            </div>
+
+            <!-- Elemento Gráfico (Derecha - Imagen PORTADA con badges interactivos) -->
+            <div class="hero-visual-col">
+                <div class="photo-card-wrapper" id="heroPhotoWrapper">
+                    <div class="photo-frame">
+                        <img src="assets/img/portada.jpg" alt="Portada Oficial de Monitorías de Álgebra Lineal" class="hero-avatar-img">
+                        <div class="photo-gradient-overlay"></div>
+                    </div>
+
+                    <!-- Badge Flotante Superior: Calificación -->
+                    <div class="floating-badge badge-top-right">
+                        <div class="badge-icon-teal">
+                            <svg viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="badge-details">
+                            <span class="badge-title">4.9 / 5.0</span>
+                            <span class="badge-sub">Excelencia académica</span>
+                        </div>
+                    </div>
+
+                    <!-- Badge Flotante Inferior: Monitor Verificado -->
+                    <div class="floating-badge badge-bottom-left">
+                        <div class="badge-icon-teal">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="badge-details">
+                            <span class="badge-title">Ivan Meza</span>
+                            <span class="badge-sub">Monitor Oficial Unimagdalena</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER / CONTACTO ===== -->
-    <footer class="footer" id="contacto">
-        <div class="container footer-container">
-            <div class="footer-cta">
-                <h2 class="footer-title">¿Listo para aprobar Álgebra Lineal?</h2>
-                <p>Escríbeme hoy y busquemos el horario que mejor te funcione.</p>
-                <div class="footer-contact-info">
-                    <div class="contact-pill">📱 300 335 9978</div>
-                    <div class="contact-pill">🏫 Universidad del Magdalena</div>
+    <!-- =========================================================
+         ÁREA PRINCIPAL DE CONTENIDO: CATÁLOGO EN SECCIONES DE FILAS (SIN ASIDE)
+         ========================================================= -->
+    <section class="catalog-full-section" id="catalogo">
+        <div class="catalog-full-container">
+
+            <!-- Encabezado de Sección Minimalista -->
+            <div class="catalog-section-header">
+                <span class="section-tag-pill">Programas & Mentorías</span>
+                <h2 class="catalog-main-title">Catálogo Completo de <span class="title-navy">Álgebra Lineal</span></h2>
+                <p class="catalog-main-desc">Selecciona la modalidad que mejor se adapte a tu horario y objetivos académicos para este periodo.</p>
+            </div>
+
+            <!-- Navegación por Categorías (Botones Anchos) -->
+            <div class="category-tabs-bar" role="tablist" aria-label="Filtrar por tipo de programa">
+                <button class="category-tab-btn is-active" data-vertical="todos" role="tab" aria-selected="true">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <span>Todos los Planes</span>
+                </button>
+                <button class="category-tab-btn tab-highlight-orange" data-vertical="vacacional" role="tab" aria-selected="false">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                    <span>Vacacional ($70K)</span>
+                </button>
+                <button class="category-tab-btn" data-vertical="individual" role="tab" aria-selected="false">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Monitoría 1 a 1 ($30K)</span>
+                </button>
+                <button class="category-tab-btn" data-vertical="grupal" role="tab" aria-selected="false">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>Planes Grupales (2 a 6 pers.)</span>
+                </button>
+                <button class="category-tab-btn" data-vertical="plan-semestral" role="tab" aria-selected="false">
+                    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span>Plan Semestral ($80K)</span>
+                </button>
+            </div>
+
+            <!-- Barra de Herramientas del Catálogo -->
+            <div class="catalog-toolbar">
+                <div class="toolbar-search-wrap">
+                    <svg class="search-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="catalogSearchInput" placeholder="Buscar por tema o modalidad (ej. vacacional, 1 a 1, 2 personas, semestral)..." class="toolbar-search-input">
+                </div>
+
+                <div class="toolbar-actions">
+                    <div class="results-counter" id="resultsCount">
+                        Mostrando <strong id="visibleCount">7</strong> planes
+                    </div>
+                    <div class="sort-select-wrapper">
+                        <label for="catalogSort" class="sort-label">Ordenar:</label>
+                        <select id="catalogSort" class="catalog-select">
+                            <option value="popular">Más destacados</option>
+                            <option value="rating">Mejor calificados</option>
+                            <option value="price-asc">Precio: menor a mayor</option>
+                            <option value="price-desc">Precio: mayor a menor</option>
+                        </select>
+                        <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 Ivan Meza. Todos los derechos reservados.</p>
+
+            <!-- =========================================================
+                 CUADRÍCULA DE FILAS (CADA CARD ES UNA FILA COMPLETA)
+                 IMAGEN A LA IZQUIERDA — INFORMACIÓN A LA DERECHA
+                 ========================================================= -->
+            <div class="courses-rows-list" id="coursesGrid">
+
+
+                <!-- FILA 1: CURSO VACACIONAL (FINAL DEL SEMESTRE) — $70.000 -->
+                <article class="course-row-card highlighted-vacacional" 
+                         data-category="vacacional" 
+                         data-vertical="vacacional" 
+                         data-price="70000" 
+                         data-rating="5.0" 
+                         data-popularity="140">
+                    <div class="row-media-col">
+                        <img src="assets/img/vacacional.jpeg" alt="Curso Vacacional de Álgebra Lineal" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-orange">☀️ CURSO VACACIONAL</span>
+                            <span class="badge-tag-teal">Final de Semestre</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-reviews">(Edición Intersemestral)</span>
+                            </div>
+                            <span class="badge-pill-pill">Temario Completo</span>
+                        </div>
+
+                        <h3 class="row-title">Curso Vacacional: Álgebra Lineal Completa (Final de Semestre)</h3>
+                        <p class="row-desc">
+                            Disponible al final del semestre para nivelar o adelantar la materia con tranquilidad. Abarca toda la temática oficial del curso: desde matrices, determinantes y sistemas de ecuaciones lineales, hasta espacios vectoriales, subespacios, transformaciones lineales y diagonalización con talleres tipo parcial resueltos paso a paso.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Incluye Documentación Adicional y Guías PDF</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Todo el Temario de Álgebra Lineal</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                <span>Soporte de Dudas por WhatsApp</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$100.000</span>
+                                    <span class="price-current">$70.000 <small>valor del curso</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20inscribirme%20en%20el%20Curso%20Vacacional%20de%20%C3%81lgebra%20Lineal%20($70.000)" target="_blank" class="row-cta-btn">
+                                    <span>Inscribirme al Vacacional</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 2: MONITORÍA PRIVADA UNO A UNO (1 A 1) — $30.000 -->
+                <article class="course-row-card" 
+                         data-category="individual" 
+                         data-vertical="individual" 
+                         data-price="30000" 
+                         data-rating="4.9" 
+                         data-popularity="120">
+                    <div class="row-media-col">
+                        <img src="assets/img/lineal1.jpeg" alt="Monitoría Privada Uno a Uno con Iván Meza" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-blue">👤 MONITORÍA PRIVADA 1 A 1</span>
+                            <span class="badge-tag-teal">Atención Exclusiva</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-reviews">(48 sesiones impartidas)</span>
+                            </div>
+                            <span class="badge-pill-pill">1 a 1 con Iván Meza</span>
+                        </div>
+
+                        <h3 class="row-title">Monitoría Privada Uno a Uno (1 a 1) con Iván Meza</h3>
+                        <p class="row-desc">
+                            Sesión privada uno a uno directamente conmigo como tu instructor personal. Espacio de 2 horas dedicado a despejar tus dudas específicas, resolver talleres evaluativos, entender demostraciones paso a paso y preparar exámenes a tu propio ritmo.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Contenido de Apoyo y Documentación Adicional</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Sesión Completa de 2 Horas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                <span>100% Personalizado a tu Ritmo</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$40.000</span>
+                                    <span class="price-current">$30.000 <small>/sesión (2h)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20una%20monitor%C3%ADa%20privada%201%20a%201%20($30.000)" target="_blank" class="row-cta-btn">
+                                    <span>Agendar Monitoría 1 a 1</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 3: PLAN GRUPAL — 2 PERSONAS ($25.000 C/U) -->
+                <article class="course-row-card" 
+                         data-category="grupal" 
+                         data-vertical="grupal" 
+                         data-price="25000" 
+                         data-rating="4.9" 
+                         data-popularity="105">
+                    <div class="row-media-col">
+                        <img src="assets/img/lineal2.jpeg" alt="Plan Grupal para 2 Personas" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-amber">👥 PLAN PARA 2 PERSONAS</span>
+                            <span class="badge-tag-teal">Tarifa Ajustada</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-reviews">(36 parejas inscritas)</span>
+                            </div>
+                            <span class="badge-pill-pill">Dúo de Estudio</span>
+                        </div>
+
+                        <h3 class="row-title">Plan Grupal: 2 Personas ($25.000 cada uno)</h3>
+                        <p class="row-desc">
+                            Estudia en pareja con tu compañero de clase y aprovecha una tarifa reducida de $25.000 por persona. Sesión intensiva de 2 horas para repasar conceptos, aclarar dudas conjuntas y resolver talleres de la universidad de manera dinámica.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Incluye Documentación Adicional y Ejercicios</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Sesión Completa de 2 Horas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                <span>Grupo de 2 Estudiantes</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$30.000</span>
+                                    <span class="price-current">$25.000 <small>/por persona (2h)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20el%20Plan%20Grupal%20para%202%20personas%20($25.000%20c/u)" target="_blank" class="row-cta-btn">
+                                    <span>Agendar Plan 2 Personas</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 4: PLAN GRUPAL — 3 PERSONAS ($20.000 C/U) -->
+                <article class="course-row-card" 
+                         data-category="grupal" 
+                         data-vertical="grupal" 
+                         data-price="20000" 
+                         data-rating="4.9" 
+                         data-popularity="110">
+                    <div class="row-media-col">
+                        <img src="assets/img/monitoria-grupo-1.jpg" alt="Plan Grupal para 3 Personas" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-teal">👥 PLAN PARA 3 PERSONAS</span>
+                            <span class="badge-tag-amber">Tarifa $20.000</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-reviews">(54 grupos realizados)</span>
+                            </div>
+                            <span class="badge-pill-pill">Trío de Estudio</span>
+                        </div>
+
+                        <h3 class="row-title">Plan Grupal: 3 Personas ($20.000 cada uno)</h3>
+                        <p class="row-desc">
+                            La opción favorita para grupos de estudio cercanos. Al unirte con 2 compañeros de salón, el valor se reduce a solo $20.000 por persona por una sesión completa de 2 horas con resolución de ejercicios tipo examen y enfoque práctico directo.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Incluye Documentación Adicional y Resúmenes PDF</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Sesión Completa de 2 Horas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                <span>Grupo de 3 Estudiantes</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$25.000</span>
+                                    <span class="price-current">$20.000 <small>/por persona (2h)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20el%20Plan%20Grupal%20para%203%20personas%20($20.000%20c/u)" target="_blank" class="row-cta-btn">
+                                    <span>Agendar Plan 3 Personas</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 5: PLAN GRUPAL — 4 PERSONAS ($20.000 C/U) -->
+                <article class="course-row-card" 
+                         data-category="grupal" 
+                         data-vertical="grupal" 
+                         data-price="20000" 
+                         data-rating="4.8" 
+                         data-popularity="98">
+                    <div class="row-media-col">
+                        <img src="assets/img/monitoria-grupo-2.jpg" alt="Plan Grupal para 4 Personas" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-teal">👥 PLAN PARA 4 PERSONAS</span>
+                            <span class="badge-tag-blue">Mantiene Tarifa $20.000</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">4.8</span>
+                                <span class="rating-reviews">(42 grupos realizados)</span>
+                            </div>
+                            <span class="badge-pill-pill">Cuarteto de Estudio</span>
+                        </div>
+
+                        <h3 class="row-title">Plan Grupal: 4 Personas ($20.000 cada uno)</h3>
+                        <p class="row-desc">
+                            Ideal para equipos de trabajo conformados en el salón. Mantiene la misma tarifa preferencial de $20.000 por persona, brindando 2 horas de preparación conjunta con ejercicios aplicados, resolución de talleres y retroalimentación personalizada.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Incluye Documentación Adicional con Respuestas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Sesión Completa de 2 Horas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                <span>Grupo de 4 Estudiantes</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$25.000</span>
+                                    <span class="price-current">$20.000 <small>/por persona (2h)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20el%20Plan%20Grupal%20para%204%20personas%20($20.000%20c/u)" target="_blank" class="row-cta-btn">
+                                    <span>Agendar Plan 4 Personas</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 6: PLAN GRUPAL — 6 PERSONAS ($16.500 C/U) -->
+                <article class="course-row-card" 
+                         data-category="grupal" 
+                         data-vertical="grupal" 
+                         data-price="16500" 
+                         data-rating="5.0" 
+                         data-popularity="115">
+                    <div class="row-media-col">
+                        <img src="assets/img/lineal4.jpeg" alt="Plan Grupal para 6 Personas" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-orange">🔥 MÁXIMO AHORRO (6 PERS.)</span>
+                            <span class="badge-tag-teal">Tarifa $16.500</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-reviews">(68 grupos realizados)</span>
+                            </div>
+                            <span class="badge-pill-pill">Grupo de 6 Compañeros</span>
+                        </div>
+
+                        <h3 class="row-title">Plan Grupal: 6 Personas ($16.500 cada uno)</h3>
+                        <p class="row-desc">
+                            La tarifa más económica del catálogo para grupos de 6 compañeros de curso. 2 horas completas de monitoría para resolver ejercicios tipo parcial, despejar dudas colectivas y asegurar la materia al menor costo posible por estudiante.
+                        </p>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Incluye Documentación Adicional y Banco de Ejercicios</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>Sesión Completa de 2 Horas</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                <span>6 Estudiantes por Sesión ($16.500 c/u)</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$25.000</span>
+                                    <span class="price-current">$16.500 <small>/por persona (2h)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20agendar%20el%20Plan%20Grupal%20para%206%20personas%20($16.500%20c/u)" target="_blank" class="row-cta-btn">
+                                    <span>Agendar Plan 6 Personas</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FILA 7: PLAN SEMESTRAL VIP ($80K) — VALOR NO NEGOCIABLE (MÍNIMO 3 PERSONAS) -->
+                <article class="course-row-card highlighted-semestral" 
+                         data-category="plan-semestral" 
+                         data-vertical="plan-semestral" 
+                         data-price="80000" 
+                         data-rating="5.0" 
+                         data-popularity="135">
+                    <div class="row-media-col">
+                        <img src="assets/img/tablero.jpeg" alt="Plan Semestral VIP de Álgebra Lineal" class="row-card-img" loading="lazy">
+                        <div class="row-badges-overlay">
+                            <span class="badge-tag-amber">💎 PLAN SEMESTRAL VIP</span>
+                            <span class="badge-tag-orange">⚠️ MÍNIMO 3 PERSONAS</span>
+                        </div>
+                    </div>
+                    <div class="row-content-col">
+                        <div class="row-meta-header">
+                            <div class="rating-stars">
+                                <svg class="star-icon" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <span class="rating-score">5.0</span>
+                                <span class="rating-reviews">(64 alumnos semestrales)</span>
+                            </div>
+                            <span class="badge-pill-pill">Acompañamiento VIP Todo el Semestre</span>
+                        </div>
+
+                        <h3 class="row-title">Plan Semestral VIP: Cobertura Total de la Materia</h3>
+                        <p class="row-desc">
+                            El paquete integral definitivo para asegurar la materia durante todo el ciclo académico: 6 monitorías distribuidas en el semestre + 2 intensivos pre-parcial (4 horas previas a cada examen) con simulacros y soporte continuo por WhatsApp.
+                        </p>
+
+                        <!-- Condición no negociable destacada -->
+                        <div class="plan-condition-alert">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                            <span><strong>Condición del Plan:</strong> Valor de $80.000 por persona <em>no negociable</em>. Aplica únicamente contratando en grupos de <strong>mínimo 3 personas</strong>.</span>
+                        </div>
+
+                        <div class="row-technical-specs">
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>Documentación Adicional Completa y Simulacros</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <span>6 Monitorías + 2 Intensivos Pre-Parcial</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                <span>Seguimiento y Resolución Continua</span>
+                            </div>
+                        </div>
+
+                        <div class="row-footer">
+                            <div class="row-instructor">
+                                <img src="assets/img/ivan-perfil.jpg" alt="Ivan Meza" class="inst-avatar">
+                                <div class="inst-info">
+                                    <span class="inst-name">Ivan Meza</span>
+                                    <span class="inst-role">
+                                        Monitor Titular
+                                        <svg class="verified-svg" viewBox="0 0 24 24" fill="#0D9488"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row-action-block">
+                                <div class="price-box">
+                                    <span class="price-original">$120.000</span>
+                                    <span class="price-current">$80.000 <small>/pers. (mín. 3 pers.)</small></span>
+                                </div>
+                                <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20queremos%20inscribirnos%20en%20el%20Plan%20Semestral%20VIP%20($80.000%20c/u%20-%20m%C3%ADnimo%203%20personas)" target="_blank" class="row-cta-btn">
+                                    <span>Inscribirme al Plan Semestral</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Estado Vacío Cuando Ningún Filtro Coincide -->
+            <div class="no-results-state" id="noResultsState" style="display: none;">
+                <div class="no-results-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <h3>No encontramos programas con esa búsqueda</h3>
+                <p>Intenta buscar por otro término o haz clic en "Todos los Programas" para ver el catálogo completo.</p>
+                <button class="btn-reset-all" id="btnResetAllFilters">Ver todos los programas</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================
+         SECCIÓN SECUNDARIA: PERFIL DEL MONITOR
+         ========================================================= -->
+    <section class="section-profile" id="sobre-ivan">
+        <div class="profile-container">
+            <div class="profile-card-minimal">
+                <div class="profile-img-col">
+                    <img src="assets/img/portada.jpg" alt="Ivan Meza — Monitor de Álgebra Lineal" class="profile-avatar">
+                </div>
+                <div class="profile-info-col">
+                    <div class="tag-label-teal">Tu Tutor & Monitor</div>
+                    <h2 class="profile-title">Aprende con <span class="text-navy">Ivan Meza</span></h2>
+                    <p class="profile-bio">
+                        Estudiante de la Universidad del Magdalena con <strong>5 semestres consecutivos</strong> ejerciendo como monitor oficial de Álgebra Lineal. Mi método elimina la abstracción innecesaria y se concentra en cómo razonan los profesores en los parciales, enseñándote atajos comprobados y demostraciones paso a paso.
+                    </p>
+                    <div class="profile-highlights">
+                        <div class="highlight-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Resolución de dudas en tiempo real</span>
+                        </div>
+                        <div class="highlight-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Material descargable con respuestas</span>
+                        </div>
+                        <div class="highlight-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Horarios flexibles entre semana y fines de semana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER CORPORATIVO MINIMALISTA
+         ========================================================= -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-brand-info">
+                    <div class="footer-logo">
+                        <svg class="footer-logo-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        <span>ÁlgebraLineal<span class="footer-accent">.pro</span></span>
+                    </div>
+                    <p class="footer-desc">Plataforma de asesoría académica, cursos vacacionales y monitorías especializadas para estudiantes universitarios.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Programas</h4>
+                    <ul>
+                        <li><a href="#catalogo">Vacacional Álgebra Lineal ($70K)</a></li>
+                        <li><a href="#catalogo">Plan Semestral VIP ($80K)</a></li>
+                        <li><a href="#catalogo">Monitorías 1 a 1</a></li>
+                        <li><a href="#catalogo">Talleres Grupales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contacto Directo</h4>
+                    <ul>
+                        <li><a href="https://wa.me/573003359978" target="_blank">WhatsApp: 300 335 9978</a></li>
+                        <li><span class="campus-tag">Universidad del Magdalena</span></li>
+                        <li><span>Santa Marta, Colombia</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-row">
+                <p>© 2026 ÁlgebraLineal.pro — Desarrollado para Ivan Meza. Todos los derechos reservados.</p>
+                <div class="footer-legal-links">
+                    <a href="#hero">Términos de servicio</a>
+                    <a href="#hero">Privacidad</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20info%20sobre%20las%20monitorias%20de%20%C3%81lgebra%20Lineal" class="whatsapp-fab" aria-label="Contactar por WhatsApp" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.647-.77-6.508-2.222l-.453-.35-3.2 1.073 1.073-3.2-.35-.453A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    <!-- =========================================================
+         BOTÓN FLOTANTE DE WHATSAPP CON MICROINTERACCIÓN
+         ========================================================= -->
+    <a href="https://wa.me/573003359978?text=Hola%20Ivan%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20monitorias%20de%20%C3%81lgebra%20Lineal" class="floating-whatsapp" aria-label="Hablar directamente por WhatsApp" target="_blank">
+        <span class="whatsapp-tooltip">¿Tienes preguntas? ¡Chatea conmigo!</span>
+        <div class="whatsapp-icon-circle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.647-.77-6.508-2.222l-.453-.35-3.2 1.073 1.073-3.2-.35-.453A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+        </div>
     </a>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
